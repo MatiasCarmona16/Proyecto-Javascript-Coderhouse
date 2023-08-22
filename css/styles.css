@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+nav {
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.envio-todopais {
+    height: 25px;
+    text-align: center;
+    font-style: italic;
+    background-color: white;
+}
+
+.imagen-color {
+    filter: grayscale(100%) brightness(0) invert(1);
+}
+
+.navbar-brand {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-brand:hover {
+    color: rgb(189, 189, 189);
+}
+
+.nav-item a{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding: 0 100px 0 100px 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 25px 0 25px;
+}
+
+.nav-item a:hover {
+    color: rgb(189, 189, 189);
+}
+
+.navbar-nav .nav-link.show {
+    color: white
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.form-control {
+    font-size: 20px;
+}
+
+.btn-outline-success {
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+.btn-outline-success:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 1500px;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    margin: 300px 0 50px 0;
+}
+
+
+.contenedor-etiquetas-ropa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 19px;
+    row-gap: 80px;
+}
+
+.etiqueta-ropa {
+    display: flex;
+    width: 24%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.etiqueta-ropa img {
+    max-width: 100%;
+    height: auto;
+}
+
+.etiqueta-ropa a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.etiqueta-ropa p {
+    text-align: center;
+    font-size: 25px;
+}
+
+
+footer {
+    background-color: black;
+    height: 20vh;
+    margin: 100px 0 10px 0;
+}
+
+.redessociales-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    column-gap: 50px;
+}
+
+.redessociales-iconos a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+/* Seccion remeras */
+
+.productos h2 {
+    margin: 250px 0 50px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
