@@ -57,3 +57,30 @@ function sumaCarrito(precioPrenda){
 
 alert("Total a pagar: $"+ carritoTotal);
 
+console.table(productos); 
+
+//find
+
+const buscarProductos = productos.find((producto) => producto.nombre === "REMERA KITTY KITTY");
+
+if(buscarProductos == undefined){
+    console.log("ESTE PRODUCTO NO EXISTE")
+}else{
+    console.log("ESTAS BUSCANDO "+ buscarProductos)
+}
+
+console.log(buscarProductos);
+
+//filter
+
+function filtrarPrecioMaximo(precioMaximo){
+    const productosFiltrados = productos.filter((producto) => producto.precio <= precioMaximo);
+    console.table(productosFiltrados);
+}
+
+let precio = parseFloat(prompt("PRECIO MAXIMO DISPUESTO A PAGAR / 0-EXIT"));
+while(precio != 0){
+    filtrarPrecioMaximo(precio); 
+    
+    precio = parseFloat(prompt("PRECIO MAXIMO DISPUESTO A PAGAR / 0-EXIT"));
+}
