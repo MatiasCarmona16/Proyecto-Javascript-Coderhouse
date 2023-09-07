@@ -73,9 +73,18 @@ console.log(buscarProductos);
 
 //filter
 
-function filtrarPrecioMaximo(precioMaximo){
+function filtrarPrecioMaximo(precioMaximo) {
     const productosFiltrados = productos.filter((producto) => producto.precio <= precioMaximo);
-    console.table(productosFiltrados);
+
+if (productosFiltrados.length != 0) {
+    let alertPrecioMax = '';
+    productosFiltrados.forEach((producto) => {
+        alertPrecioMax += `ID: ${producto.id} - NOMBRE ${producto.nombre} - PRECIO $ ${producto.precio}\n`;
+    });
+    alert(alertPrecioMax);
+}else {
+    alert("TU PRODUCTO NO SE ENCUENTRA DISPONIBLE EN EL PRECIO SELECCIONADO")
+}
 }
 
 let precio = parseFloat(prompt("PRECIO MAXIMO DISPUESTO A PAGAR / 0-EXIT"));
