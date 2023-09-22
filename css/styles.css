@@ -123,10 +123,16 @@ h1 {
 }
 
 
-footer {
+.footer-index {
     background-color: black;
     height: 20vh;
     margin: 100px 0 10px 0;
+}
+
+.footer-carrito {
+    background-color: black;
+    height: 20vh;
+    margin: 500px 0 10px 0;
 }
 
 .redessociales-iconos {
