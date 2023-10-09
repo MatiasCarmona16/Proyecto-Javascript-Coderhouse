@@ -22,7 +22,8 @@ function renderizacionProds(listaProds) {
 
     let botones = document.getElementsByClassName("compra");
     for(const boton of botones){
-        boton.addEventListener("click", ()=>{
+        boton.addEventListener("click", (event)=>{
+            event.preventDefault();
             console.log("Agregaste al carrito "+boton.id);
             const prodCarro = listaProds.find((producto)=>producto.id == boton.id);
             console.log(prodCarro);
@@ -37,7 +38,19 @@ renderizacionProds(productos);
 
 function agregAlCarro(producto){
     console.table(carrito);
-    alert(`Agregaste ${producto.nombre} al carrito`);
+
+    Toastify({
+
+        text: `Agregaste ${producto.nombre} al carrito`,
+        
+        duration: 2200,
+        gravity: "bottom",
+        style: {
+            background: "rgb(65,64,64)",
+            background: "radial-gradient(circle, rgba(65,64,64,1) 18%, rgba(8,8,8,1) 86%)",
+        },
+        
+        }).showToast();
 
     tablaBody.innerHTML += `
         <tr>
