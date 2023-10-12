@@ -1,10 +1,10 @@
 let carritoTotal = 0;
-let carrito = []
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //PRODUCTOS DOM
 
 const contenedorProd = document.getElementById("products");
-const tablaBody = document.getElementById("tablabody");
+const tablaBody = document.getElementById("tabla-carrito");
 
 function renderizacionProds(listaProds) {
     for (const prod of listaProds) {
@@ -27,7 +27,7 @@ function renderizacionProds(listaProds) {
             console.log("Agregaste al carrito "+boton.id);
             const prodCarro = listaProds.find((producto)=>producto.id == boton.id);
             console.log(prodCarro);
-            carrito.push(prodCarro)
+            carrito.push(prodCarro);
             localStorage.setItem('carrito', JSON.stringify(carrito))
             agregAlCarro(prodCarro);
         })
@@ -46,8 +46,8 @@ function agregAlCarro(producto){
         duration: 2200,
         gravity: "bottom",
         style: {
-            background: "rgb(65,64,64)",
-            background: "radial-gradient(circle, rgba(65,64,64,1) 18%, rgba(8,8,8,1) 86%)",
+            background: "rgb(36,36,36)",
+            background: "radial-gradient(circle, rgba(36,36,36,1) 18%, rgba(8,8,8,1) 86%)",
         },
         
         }).showToast();
