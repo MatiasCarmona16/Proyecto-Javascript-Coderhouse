@@ -24,9 +24,8 @@ function renderizacionProds(listaProds) {
     for(const boton of botones){
         boton.addEventListener("click", (event)=>{
             event.preventDefault();
-            console.log("Agregaste al carrito "+boton.id);
+
             const prodCarro = listaProds.find((producto)=>producto.id == boton.id);
-            console.log(prodCarro);
             carrito.push(prodCarro);
             localStorage.setItem('carrito', JSON.stringify(carrito))
             agregAlCarro(prodCarro);
@@ -67,5 +66,20 @@ localStorage.setItem("producto",prodctAJson);
 
 const productoGuardado = JSON.parse(localStorage.getItem("productos"));
 
-//FUNCION BUSQUEDA INPUT SEARCH
+//FUNCION recoger carrito perdido
 
+function DibujoTabla(){
+    for(const produ of carrito){
+        tablaBody.innerHTML+= `
+        <tr>
+            <td>${produ.id}</td>
+            <td>${produ.nombre}</td>
+            <td>${produ.precio}</td>
+        </tr>
+        `;
+    }
+}
+
+if(carrito.length!=0){
+    DibujoTabla();
+}
