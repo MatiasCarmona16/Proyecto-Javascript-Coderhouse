@@ -4,7 +4,6 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //PRODUCTOS DOM
 
 const contenedorProd = document.getElementById("products");
-const tablaBody = document.getElementById("tabla-carrito");
 
 function renderizacionProds(listaProds) {
     for (const prod of listaProds) {
@@ -51,13 +50,6 @@ function agregAlCarro(producto){
         
         }).showToast();
 
-    tablaBody.innerHTML += `
-        <tr>
-            <td>${producto.id}</td>
-            <td>${producto.nombre}</td>
-            <td>${producto.precio}</td>
-        </tr>
-    `;
 }
 
 //LOCAL STORAGE
@@ -67,19 +59,3 @@ localStorage.setItem("producto",prodctAJson);
 const productoGuardado = JSON.parse(localStorage.getItem("productos"));
 
 //FUNCION recoger carrito perdido
-
-function DibujoTabla(){
-    for(const produ of carrito){
-        tablaBody.innerHTML+= `
-        <tr>
-            <td>${produ.id}</td>
-            <td>${produ.nombre}</td>
-            <td>${produ.precio}</td>
-        </tr>
-        `;
-    }
-}
-
-if(carrito.length!=0){
-    DibujoTabla();
-}
