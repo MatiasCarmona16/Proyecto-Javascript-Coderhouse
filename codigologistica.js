@@ -44,8 +44,8 @@ function agregAlCarro(producto){
         duration: 2200,
         gravity: "bottom",
         style: {
-            background: "rgb(36,36,36)",
-            background: "radial-gradient(circle, rgba(36,36,36,1) 18%, rgba(8,8,8,1) 86%)",
+            background: "rgb(22,22,22)",
+            background: "radial-gradient(circle, rgba(22,22,22,1) 18%, rgba(8,8,8,1) 86%)",
         },
         
         }).showToast();

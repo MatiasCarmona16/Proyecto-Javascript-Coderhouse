@@ -27,6 +27,7 @@ nav {
     background-color: white;
 }
 
+
 .imagen-color {
     filter: grayscale(100%) brightness(0) invert(1);
 }
@@ -84,7 +85,7 @@ nav {
     max-width: 1500px;
 }
 
-h1 {
+.index-h1 {
     display: block;
     text-align: center;
     margin: 270px 0 70px 0;
@@ -151,8 +152,15 @@ h5 {
 
 /* CARRITO PAG */
 
+
 .datosComprador {
     margin: 100px 0 0 0;
+}
+
+.carrito-h2{
+    font-weight: 100;
+    font-style: italic;
+    font-size: 30px;
 }
 
 h2 {
@@ -177,6 +185,7 @@ h2 {
     border-radius: 4px;
     outline: none;
     margin: 10px 0 20px 0;
+    color: #5f5f5f;
   }
   
   label {
@@ -192,7 +201,7 @@ h2 {
   input:focus + label, input:valid + label {
     top: 5px;
     font-size: 12px;
-    color: #6b6a6a;
+    color: #999;
   }
 
 .formu-control {
@@ -201,12 +210,21 @@ h2 {
 }
 
 .formasdepago {
-    margin: 80px 0 0 0;
+    margin: 80px 0 20px 0;
 }
 
-i{
+#tarjeta-favi {
     margin: 0 0 0 10px;
 }
+
+.tarjeta-pago {
+    display: inline-block;
+    height: 40px;
+    margin: 10px 0 0 0;
+    padding: 0 5px 0 5px;
+}
+
+
 
 
 
