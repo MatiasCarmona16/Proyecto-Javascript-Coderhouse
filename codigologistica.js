@@ -12,7 +12,7 @@ function renderizacionProds(listaProds) {
             <img src=${prod.imagen} class="card-img-top" alt=${prod.nombre}/>
                 <div class="card-body">
                     <h5 class="card-title">${prod.nombre}</h5>
-                    <p class="card-text">$ ${prod.precio}</p>
+                    <p class="card-text">$${prod.precio}</p>
                     <a id=${prod.id} href="#" class="btn btn-dark compra">Comprar</a>
                 </div>
         </div>
