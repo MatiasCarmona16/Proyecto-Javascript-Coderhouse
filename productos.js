@@ -49,7 +49,7 @@ const productos = [{
     {
         id: 9,
         nombre: "SAD BA$TARD",
-        imagen: "img/remeraSADBASTARD.webp",
+        imagen: "img/remerasadbastard.webp",
         precio: 21900,
     },
     {
